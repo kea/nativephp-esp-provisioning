@@ -1,0 +1,26 @@
+{
+    "name": "aura/nativephp-esp-provisioning",
+    "description": "NativePHP plugin for ESP-IDF WiFi provisioning via BLE/SoftAP (Android)",
+    "type": "nativephp-plugin",
+    "license": "Apache-2.0",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aura\\EspProvisioning\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aura\\EspProvisioning\\EspProvisioningServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

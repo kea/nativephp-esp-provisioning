@@ -1,0 +1,77 @@
+{
+    "namespace": "EspProvisioning",
+    "bridge_functions": [
+        {
+            "name": "EspProvisioning.SearchBleDevices",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.SearchBleDevices"
+        },
+        {
+            "name": "EspProvisioning.CreateDevice",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.CreateDevice"
+        },
+        {
+            "name": "EspProvisioning.ConnectBLE",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.ConnectBLE"
+        },
+        {
+            "name": "EspProvisioning.ConnectSoftAP",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.ConnectSoftAP"
+        },
+        {
+            "name": "EspProvisioning.ScanQR",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.ScanQR"
+        },
+        {
+            "name": "EspProvisioning.SetProofOfPossession",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.SetProofOfPossession"
+        },
+        {
+            "name": "EspProvisioning.ScanNetworks",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.ScanNetworks"
+        },
+        {
+            "name": "EspProvisioning.Provision",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.Provision"
+        },
+        {
+            "name": "EspProvisioning.SendData",
+            "android": "com.aura.plugins.espprovisioning.EspProvisioningFunctions.SendData"
+        }
+    ],
+    "events": [
+        "Aura\\EspProvisioning\\Events\\DevicesFound",
+        "Aura\\EspProvisioning\\Events\\DeviceConnected",
+        "Aura\\EspProvisioning\\Events\\DeviceConnectionFailed",
+        "Aura\\EspProvisioning\\Events\\NetworksScanned",
+        "Aura\\EspProvisioning\\Events\\ProvisioningSucceeded",
+        "Aura\\EspProvisioning\\Events\\ProvisioningFailed"
+    ],
+    "ios": {
+        "min_version": 16
+    },
+    "android": {
+        "min_version": 26,
+        "permissions": [
+            "android.permission.BLUETOOTH",
+            "android.permission.BLUETOOTH_ADMIN",
+            "android.permission.BLUETOOTH_SCAN",
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.CAMERA"
+        ],
+        "repositories": [
+            {
+                "type": "maven",
+                "url": "https://jitpack.io"
+            }
+        ],
+        "dependencies": {
+            "implementation": [
+                "com.github.espressif:esp-idf-provisioning-android:lib-2.4.4"
+            ]
+        }
+    }
+}
