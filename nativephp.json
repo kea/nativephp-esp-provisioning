@@ -70,7 +70,8 @@
         ],
         "dependencies": {
             "implementation": [
-                "com.github.espressif:esp-idf-provisioning-android:lib-2.4.4"
+                "com.github.espressif:esp-idf-provisioning-android:lib-2.4.4",
+                "org.greenrobot:eventbus:3.3.1"
             ]
         }
     }
